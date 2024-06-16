@@ -1,3 +1,87 @@
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  max-height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+form {
+  display: grid;
+  grid-gap: 15px;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.form-container label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.form-container input,
+.form-container select {
+  width: 230px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #FFF;
+}
+
+.form-container .postal-code-input {
+  width: 125px;
+}
+
+.form-container select:invalid {
+  color: #d3d3d3;
+}
+
+.form-container select option {
+  color: black;
+}
+
+.form-container input::placeholder {
+  color: #ccc;
+}
+
+input.error,
+select.error {
+  border-color: red;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  background-color: #5DD669;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+  height: 40px;
+}
+
+button:disabled {
+  background-color: #5DD66980;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 10px;
+  grid-column: 2 / 3;
+  margin-top: -10px;
 }
